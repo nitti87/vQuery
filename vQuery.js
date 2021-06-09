@@ -1,5 +1,3 @@
-const { ipc_sendEvent } = require('../Other/ipc')
-
 const $ = (element) => {
   let e, obj = {
 
