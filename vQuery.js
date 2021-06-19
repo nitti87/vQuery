@@ -2,7 +2,7 @@ const $ = (element) => {
   let e, obj = {
 
     elements(element) {
-      return e ? e : (document.querySelector(element) !== null || document.querySelectorAll(element).length > 0 ? [...document.querySelectorAll(element)] : undefined)
+      return e ? e : (element instanceof HTMLElement ? [element] : typeof element === 'string' && document.querySelectorAll(element).length > 0 ? [...document.querySelectorAll(element)] : undefined)
     },
 
     // Fade-in/out function for the DOM-selector
